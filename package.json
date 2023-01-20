@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "24.recipedia",
+  "version": "1.0.0",
+  "description": "A source of good recipies",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon backend/server.js"
+  },
+  "author": "Tharindu Thennakoon",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.8.4",
+    "mongoose-findorcreate": "^3.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
