@@ -5,7 +5,7 @@ import RecipieModel from '../models/recipeModel.js';
 
 const addRecipe = expressAsyncHandler(async (req, res) => {
   const newRecipe = new RecipieModel({
-    recipeName: req.body.recipeName.toLowerCase(),
+    recipeName: req.body.recipeName.trim().toLowerCase(),
     ingredient1: req.body.ingredient1,
     ingredient2: req.body.ingredient2,
     ingredient3: req.body.ingredient3,
@@ -22,7 +22,7 @@ const addRecipe = expressAsyncHandler(async (req, res) => {
 const getRecipe = expressAsyncHandler(async (req, res) => {
   //   const query = req.query.search.toLowerCase();
   RecipieModel.find(
-    { recipeName: req.query.search.toLowerCase() },
+    { recipeName: { $regex: req.query.search.toLowerCase(), $options: 'i' } },
     function (err, foundRecipies) {
       err ? res.send(err) : res.send(foundRecipies);
     }
