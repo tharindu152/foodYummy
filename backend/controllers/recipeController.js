@@ -29,10 +29,11 @@ const getRecipe = expressAsyncHandler(async (req, res) => {
   );
 });
 
-const deleteRecipe = expressAsyncHandler(async (req, res) => {
-  RecipieModel.deleteOne({ recipeName: req.query.delete }, function (err) {
-    err ? res.send(err) : res.send('Successfully deleted the item');
-  });
-});
+// const deleteRecipe = expressAsyncHandler(async (req, res) => {
+//   console.log(res.params.id);
+//   RecipieModel.findByIdAndRemove(res.params.id, function (err, rest) {
+//     err ? console.log(err) : console.log(rest);
+//   });
+// });
 
 export { addRecipe, getRecipe };

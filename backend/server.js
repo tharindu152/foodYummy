@@ -5,7 +5,7 @@ import connectDB from './config/db.js';
 import { config } from 'dotenv';
 import recipeRoutes from './routes/recipeRoutes.js';
 
-import RecipieModel from './models/recipeModel.js';
+// import RecipieModel from './models/recipeModel.js';
 
 config();
 connectDB();
